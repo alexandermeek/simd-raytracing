@@ -45,8 +45,8 @@ struct sphere {
         f8 t1 = div8(add8(mul8(set8(-1), b), sqrt8(b24ac)), mul8(set8(2), a));
         f8 t2 = div8(sub8(mul8(set8(-1), b), sqrt8(b24ac)), mul8(set8(2), a));
 
-        f8 t_min = min8(t1, t2);
-        return cmp8(t1, set8(0), _CMP_LT_OQ);
+        f8 t_min = min8(b24ac, min8(t1, t2));
+        return cmp8(t_min, set8(0), _CMP_GT_OQ);
     }
 };
 

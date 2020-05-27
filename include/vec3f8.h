@@ -14,7 +14,8 @@
 #define cmp8(a, b, i) _mm256_cmp_ps(a, b, i)
 #define mm8(a) _mm256_movemask_ps(a)
 #define bld8(a, b, m) _mm256_blendv_ps(a, b, m)
-#define sqrt8(a) _mm256_sqrt_ps (a)
+#define sqrt8(a) _mm256_sqrt_ps(a)
+#define load8(a) _mm256_loadu_ps (a)
 
 struct vec3f8 { 
     f8 x, y, z;
